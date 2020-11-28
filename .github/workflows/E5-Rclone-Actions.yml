@@ -43,7 +43,7 @@ jobs:
           }
           
           #Backup HomeFtp video to cloud storerage
-          rclone move homeftp:sda1/MiCamera e5:MiCamera
+          rclone move homeftp:sda1/MiCamera gd:MiCamera
 
           
           # 随机延迟0~15分钟后再进行操作,可自行设置时间
@@ -74,10 +74,7 @@ jobs:
           rclone rmdir e5:E5-Rclone-Actions-mkdir
           echo "创建、删除目录完毕"
           
-          #move files from homeftp to e5
-          rclone move homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed3f7 e5:MiCamera/04cf8c6ed3f7
-          rclone move homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed134 e5:MiCamera/04cf8c6ed134
-          rclone move homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6efd48 e5:MiCamera/04cf8c6efd48
+
           
           
 
