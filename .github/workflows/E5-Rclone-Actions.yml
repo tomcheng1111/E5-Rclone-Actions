@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-  schedule:
-    - cron: 0 4,16 * * *
+  schedule: # 語法可上 crontab.guru 查詢
+    - cron: 45 1,15 * * *
   watch:
     types: started
 jobs:
@@ -43,9 +43,9 @@ jobs:
           }
           
           #Backup HomeFtp video to cloud storerage
-          rclone move homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed3f7 gd:MiCamera/04cf8c6ed3f7
-          rclone move homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed134 gd:MiCamera/04cf8c6ed134
-          rclone move homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6efd48 gd:MiCamera/04cf8c6efd48
+          rclone move -vv homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed3f7 gd:MiCamera/04cf8c6ed3f7 --delete-empty-src-dirs flag
+          rclone move -vv homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed134 gd:MiCamera/04cf8c6ed134 --delete-empty-src-dirs flag
+          rclone move -vv homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6efd48 gd:MiCamera/04cf8c6efd48 --delete-empty-src-dirs flag
 
           
           # 随机延迟0~15分钟后再进行操作,可自行设置时间
