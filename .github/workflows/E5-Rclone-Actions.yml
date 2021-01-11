@@ -43,9 +43,9 @@ jobs:
           }
           
           #Backup HomeFtp video to cloud storerage
-          rclone move -v homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed3f7 e5:MiCamera/LivingRoom --delete-empty-src-dirs –ignore-times
-          rclone move -v homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed134 e5:MiCamera/LivingOutsidt --delete-empty-src-dirs –ignore-times
-          rclone move -v homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6efd48 e5:MiCamera/Garage --delete-empty-src-dirs –ignore-times
+          rclone move -v homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed3f7 e5:MiCamera/LivingRoom --delete-empty-src-dirs–ignore-times
+          rclone move -v homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6ed134 e5:MiCamera/LivingOutsidt --delete-empty-src-dirs–ignore-times
+          rclone move -v homeftp:sda1/MiCamera/xiaomi_camera_videos/04cf8c6efd48 e5:MiCamera/Garage --delete-empty-src-dirs–ignore-times
 
           
           # 随机延迟0~15分钟后再进行操作,可自行设置时间
